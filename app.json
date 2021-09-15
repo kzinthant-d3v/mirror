@@ -19,7 +19,8 @@
       "required":true
     },
     "is_team_drive":{
-      "description": "If your folder is in team drive, put True"
+      "description": "If your folder is in team drive, put True",
+      "required": false
     },
     "telegram_api_id":{
       "description": "Get from my.telegram.org, App api_id",
@@ -30,31 +31,40 @@
       "required":true
     },
     "authorized_chats":{
-      "description": "Authorized chat ids split by space"
+      "description": "Authorized chat ids split by space",
+      "required": false
     },
     "sudo_users":{
-      "description": "Sudo users split by space"
+      "description": "Sudo users split by space",
+      "required": false
     },
     "use_service_accounts":{
-      "description": "If you use service accounts, put True"
+      "description": "If you use service accounts, put True",
+      "required": false
     },
     "accounts_zip_url":{
-      "description": "If you want to use service accounts, put direct download link for service accounts (accounts.zip) named"
+      "description": "If you want to use service accounts, put direct download link for service accounts (accounts.zip) named",
+      "required": false
     },
     "mega_api_key":{
-      "description": "If you want to use pro mega, get this from mega.nz/sdk"
+      "description": "If you want to use pro mega, get this from mega.nz/sdk",
+      "required": false
     },
     "mega_email_id":{
-      "description": "If you use mega, put your email"
+      "description": "If you use mega, put your email",
+      "required": false
     },
     "mega_password":{
-      "description": "If you use mega, put your password"
+      "description": "If you use mega, put your password",
+      "required": false
     },
     "mega_limit":{
-      "description": "To limit the size of Mega download (leave space between number and unit, available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB"
+      "description": "To limit the size of Mega download (leave space between number and unit, available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB",
+      "required": false
     },
     "clone_limit":{
-      "description": "To limit the size of Google Drive folder/file which you can clone (leave space between number and unit, Available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB"
+      "description": "To limit the size of Google Drive folder/file which you can clone (leave space between number and unit, Available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB",
+      "required": false
     },
     "base_url_of_bot":{
       "description": "https://yourappname.herokuapp.com",
@@ -65,22 +75,28 @@
       "required": true
     },
     "button_four_name":{
-      "description": "The fourth button name"
+      "description": "The fourth button name",
+      "required": false
     },
     "button_four_url":{
-      "description": "The link for fourth url"
+      "description": "The link for fourth url",
+      "required": false
     },
     "button_five_name":{
-      "description": "The fivth button name"
+      "description": "The fivth button name",
+      "required": false
     },
     "button_five_url":{
-      "description": "The link for fivth url"
+      "description": "The link for fivth url",
+      "required": false
     },
     "button_six_name":{
-      "description": "The sixth button name"
+      "description": "The sixth button name",
+      "required": false
     },
     "button_six_url":{
-      "description": "The link for sixth url"
+      "description": "The link for sixth url",
+      "required": false
     }
 	},
     	"stack": "container"
