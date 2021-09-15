@@ -34,15 +34,15 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 LOGGER = logging.getLogger(__name__)
 
-CONFIG_FILE_URL = os.environ.get('CONFIG_FILE_URL', None)
-if CONFIG_FILE_URL is not None:
-    res = requests.get(CONFIG_FILE_URL)
-    if res.status_code == 200:
-        with open('config.env', 'wb') as f:
-           f.truncate(0)
-           f.write(res.content)
-    else:
-        logging.error(res.status_code)
+#CONFIG_FILE_URL = os.environ.get('CONFIG_FILE_URL', None)
+#if CONFIG_FILE_URL is not None:
+#    res = requests.get(CONFIG_FILE_URL)
+#    if res.status_code == 200:
+#        with open('config.env', 'wb') as f:
+#           f.truncate(0)
+#           f.write(res.content)
+#    else:
+#        logging.error(res.status_code)
 
 load_dotenv('config.env')
 
