@@ -190,6 +190,27 @@ telegraph.create_account(short_name=sname)
 telegraph_token = telegraph.get_access_token()
 
 try:
+    ACCOUNTS_ZIP_URL = getConfig('ACCOUNTS_ZIP_URL')
+    if len(ACCOUNTS_ZIP_URL) == 0:
+        ACCOUNTS_ZIP_URL = None
+    else:
+        res = requests.get(ACCOUNTS_ZIP_URL)
+        if res.status_code == 200:
+            with open('accounts.zip', 'wb') as f:
+               f.truncate(0)
+               f.write(res.content)
+               print("Downloaded accounts.zip successfully!")
+        else:
+            logging.error(res.status_code)
+            raise KeyError
+        subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
+        print("unzip accounts.zip successfully!")
+        os.remove("accounts.zip")
+        
+except KeyError:
+    pass
+    
+try:
     STATUS_LIMIT = getConfig('STATUS_LIMIT')
     if len(STATUS_LIMIT) == 0:
         raise KeyError
@@ -361,25 +382,7 @@ try:
             raise KeyError
 except KeyError:
     pass
-try:
-    ACCOUNTS_ZIP_URL = getConfig('ACCOUNTS_ZIP_URL')
-    if len(ACCOUNTS_ZIP_URL) == 0:
-        ACCOUNTS_ZIP_URL = None
-    else:
-        res = requests.get(ACCOUNTS_ZIP_URL)
-        print("Downloaded accounts.zip successfully!")
-        if res.status_code == 200:
-            with open('accounts.zip', 'wb') as f:
-               f.truncate(0)
-               f.write(res.content)
-        else:
-            logging.error(res.status_code)
-            raise KeyError
-        subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
-        os.remove("accounts.zip")
-        
-except KeyError:
-    pass
+
 try:
     MULTI_SEARCH_URL = getConfig('MULTI_SEARCH_URL')
     if len(MULTI_SEARCH_URL) == 1:
