@@ -4,6 +4,10 @@ if [[ -n $accounts_zip_url ]]; then
 	rm accounts.zip
 fi
 
+if [[ -n $token_pickle_url ]]; then
+	wget -q $token_pickle_url
+fi
+
 echo "
 BOT_TOKEN = $bot_token
 GDRIVE_FOLDER_ID = $gdrive_folder_id
