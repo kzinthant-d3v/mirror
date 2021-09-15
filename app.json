@@ -1,0 +1,87 @@
+{
+	"name": "Slam Mirror Bot",
+	"description": "Slam Mirror Bot with easy deployment",
+	"repository": "https://github.com/kzinthant-kas/slam_easy_deploy",
+	"keywords": ["Slam","Slam Mirror Bot"],
+        "website": "https://t.me/drivetalk",
+        "success_url": "https://github.com/kzinthant-kas/slam_easy_deploy/main/README.md",
+	"env": {
+    "bot_token":{
+      "description": "Get one from @botfather",
+      "required":true
+    },
+    "ownder_id":{
+      "description": "https://t.me/MissRose_bot in MissRose, type /id and put here",
+      "required":true
+    },
+    "gdrive_folder_id":{
+      "description": "Your google drive folder id",
+      "required":true
+    },
+    "is_team_drive":{
+      "description": "If your folder is in team drive, put True"
+    },
+    "telegram_api_id":{
+      "description": "Get from my.telegram.org, App api_id",
+      "required":true
+    },
+    "telegram_api_hash":{
+      "description": "Get from my.telegram.org, App api_hash",
+      "required":true
+    },
+    "authorized_chats":{
+      "description": "Authorized chat ids split by space"
+    },
+    "sudo_users":{
+      "description": "Sudo users split by space"
+    },
+    "use_service_accounts":{
+      "description": "If you use service accounts, put True"
+    },
+    "accounts_zip_url":{
+      "description": "If you want to use service accounts, put direct download link for service accounts (accounts.zip) named"
+    },
+    "mega_api_key":{
+      "description": "If you want to use pro mega, get this from mega.nz/sdk"
+    },
+    "mega_email_id":{
+      "description": "If you use mega, put your email"
+    },
+    "mega_password":{
+      "description": "If you use mega, put your password"
+    },
+    "mega_limit":{
+      "description": "To limit the size of Mega download (leave space between number and unit, available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB"
+    },
+    "clone_limit":{
+      "description": "To limit the size of Google Drive folder/file which you can clone (leave space between number and unit, Available units are (gb or GB, tb or TB), Examples: 100 gb, 100 GB, 10 tb, 10 TB"
+    },
+    "base_url_of_bot":{
+      "description": "https://yourappname.herokuapp.com",
+      "required": true
+    },
+    "token_pickle_url": {
+      "description": "Required for authentication, put your direct download link here", 
+      "required": true
+    },
+    "button_four_name":{
+      "description": "The fourth button name"
+    },
+    "button_four_url":{
+      "description": "The link for fourth url"
+    },
+    "button_five_name":{
+      "description": "The fivth button name"
+    },
+    "button_five_url":{
+      "description": "The link for fivth url"
+    },
+    "button_six_name":{
+      "description": "The sixth button name"
+    },
+    "button_six_url":{
+      "description": "The link for sixth url"
+    }
+	},
+    	"stack": "container"
+}
