@@ -380,7 +380,7 @@ except KeyError:
     pass
 try:
     MULTI_SEARCH_URL = getConfig('MULTI_SEARCH_URL')
-    if len(MULTI_SEARCH_URL) == 0:
+    if len(MULTI_SEARCH_URL) == 1:
         MULTI_SEARCH_URL = None
     else:
         res = requests.get(MULTI_SEARCH_URL)
