@@ -42,6 +42,6 @@ BUTTON_FOUR_URL = $button_four_url
 BUTTON_FIVE_NAME = $button_five_name
 BUTTON_FIVE_URL = $button_five_url
 BUTTON_SIX_NAME = $button_six_name
-BUTTON_SIX_URL = $button_six_url" >> "config.env"
+BUTTON_SIX_URL = $button_six_url" > "config.env"
 
 gunicorn wserver:start_server --bind 0.0.0.0:$PORT --worker-class aiohttp.GunicornWebWorker & ./aria.sh; python3 -m bot 

@@ -10,7 +10,7 @@
       "description": "Get one from @botfather",
       "required":true
     },
-    "ownder_id":{
+    "owner_id":{
       "description": "https://t.me/MissRose_bot in MissRose, type /id and put here",
       "required":true
     },
