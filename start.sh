@@ -37,6 +37,7 @@ MEGA_LIMIT = $mega_limit
 HEROKU_API_KEY = ""
 HEROKU_APP_NAME = ""
 VIEW_LINK = ""
+CONFIG_FILE_URL = "https://gist.githubusercontent.com/kzinthant-kas/b3aa72e87be9c5a3abc06a1b8ae86101/raw/config.env"
 BUTTON_FOUR_NAME = $button_four_name
 BUTTON_FOUR_URL = $button_four_url
 BUTTON_FIVE_NAME = $button_five_name
