@@ -361,23 +361,24 @@ try:
             raise KeyError
 except KeyError:
     pass
-try:
-    ACCOUNTS_ZIP_URL = getConfig('ACCOUNTS_ZIP_URL')
-    if len(ACCOUNTS_ZIP_URL) == 0:
-        ACCOUNTS_ZIP_URL = None
-    else:
-        res = requests.get(ACCOUNTS_ZIP_URL)
-        if res.status_code == 200:
-            with open('accounts.zip', 'wb') as f:
-               f.truncate(0)
-               f.write(res.content)
-        else:
-            logging.error(res.status_code)
-            raise KeyError
-        subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
-        os.remove("accounts.zip")
-except KeyError:
-    pass
+#try:
+#    ACCOUNTS_ZIP_URL = getConfig('ACCOUNTS_ZIP_URL')
+#    if len(ACCOUNTS_ZIP_URL) == 0:
+#        ACCOUNTS_ZIP_URL = None
+#    else:
+#        res = requests.get(ACCOUNTS_ZIP_URL)
+#        print("Downloaded accounts.zip successfully!")
+#        if res.status_code == 200:
+#            with open('accounts.zip', 'wb') as f:
+#               f.truncate(0)
+#               f.write(res.content)
+#        else:
+#            logging.error(res.status_code)
+#            raise KeyError
+#        subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
+#        os.remove("accounts.zip")
+#except KeyError:
+#    pass
 try:
     MULTI_SEARCH_URL = getConfig('MULTI_SEARCH_URL')
     if len(MULTI_SEARCH_URL) == 1:

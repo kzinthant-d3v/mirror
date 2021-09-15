@@ -1,3 +1,9 @@
+if [[ -n $accounts_zip_url ]]; then
+	wget -q $accounts_zip_url
+	unzip accounts.zip
+	rm accounts.zip
+fi
+
 echo "
 BOT_TOKEN = $bot_token
 GDRIVE_FOLDER_ID = $gdrive_folder_id
