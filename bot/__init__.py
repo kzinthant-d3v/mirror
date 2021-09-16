@@ -200,12 +200,12 @@ try:
                f.truncate(0)
                f.write(res.content)
                print("Downloaded accounts.zip successfully!")
+            subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
+            print("unzip accounts.zip successfully!")
+            os.remove("accounts.zip")
         else:
             logging.error(res.status_code)
             raise KeyError
-        subprocess.run(["unzip", "-q", "-o", "accounts.zip"])
-        print("unzip accounts.zip successfully!")
-        os.remove("accounts.zip")
         
 except KeyError:
     pass
