@@ -1,8 +1,8 @@
 {
-	"name": "Slam Mirror Bot",
-	"description": "Slam Mirror Bot with easy deployment",
-	"repository": "https://github.com/kzinthant-kas/slam_easy_deploy",
-	"keywords": ["Slam","Slam Mirror Bot"],
+	"name": "Deployment",
+	"description": "Deployment for heroku",
+	"repository": "There is no repo",
+	"keywords": ["Deploy","Deployment"],
         "website": "https://t.me/drivetalk",
         "success_url": "https://github.com/kzinthant-kas/slam_easy_deploy/main/README.md",
 	"env": {
