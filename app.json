@@ -1,10 +1,10 @@
 {
 	"name": "Deployment",
 	"description": "Deployment for heroku",
-	"repository": "There is no repo",
+	"repository": "https://github.com/kzinthant-kas/mirror/",
 	"keywords": ["Deploy","Deployment"],
         "website": "https://t.me/drivetalk",
-        "success_url": "https://github.com/kzinthant-kas/slam_easy_deploy/main/README.md",
+        "success_url": "https://github.com/kzinthant-kas/mirror/main/README.md",
 	"env": {
     "bot_token":{
       "description": "Get one from @botfather",
